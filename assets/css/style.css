@@ -1,0 +1,370 @@
+@font-face {
+    font-family: "Amatic";
+    src: url(../fonts/AmaticSC-Bold.ttf);
+}
+@font-face {
+    font-family: "Josefin";
+    src: url(../fonts/JosefinSans-Bold.ttf);
+}
+body {
+    font-family: "Josefin";
+    margin: 0px;
+    background-color: #f4edf1;
+}
+
+#headerPic {
+    position: absolute;
+    background-image: url("../img/headerPicCrop.jpg");
+    background-position: top;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 3;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Amatic";
+    font-size: min(130px, 15vw);
+    /* font-size: 130px; */
+    color: #EDF4ED;
+    background-color: #00000048;
+    width: 92%;
+    max-width: 670px;
+    height: min(124px, 15vw);
+    margin-top: 10vh;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+}
+#headerListButtons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    background-image: linear-gradient(#ffffff00, #31411a);
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    bottom: 0px;
+}
+.headerButtons {
+    text-decoration: none;
+    color: #EDF4ED;
+    font-size: min(35px, 4vw);
+    margin-bottom: 4vh;
+}
+.headerButtons:hover {
+    color: #e7ff60;
+}
+nav {
+    display: grid;
+    grid-template-columns: 28% repeat(3, 24%);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "navLogo navProducts navShops navContact";
+    background-color: #79B971;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    height: 80px;
+    width: 100%;
+    z-index: 1;
+}
+nav div a {
+    text-decoration: none;
+    color: #EDF4ED;
+    font-size: min(25px, 3vw);
+}
+nav div a:hover {
+    color: #e7ff60;
+}
+.navButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* hamburger menu */
+#navMenu {
+    display: none;
+}
+#iconMenu {
+    color: #edf4ed;
+    font-size: 40px;
+    transform: rotate(0deg);
+    transition: .3s;
+}
+#navMenu input:checked ~ #iconMenu {
+    transform: rotate(90deg);
+}
+#navMenu input {
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+#openMenu {
+    top: 80px;
+    left: 0px;
+    height: auto;
+    margin: 0px;
+    padding: 0px 0px 40px 0px;
+    width: 100%;
+    list-style: none;
+    background-color: #354124;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: .3s;
+}
+#navMenu input:checked ~ #openMenu {
+    transform: scaleY(1);
+}
+#openMenu li {
+    padding-top: 40px;
+}
+#openMenu li a {
+    font-size: 25px;
+}
+/* fin hamburger menu */
+#navLogo {
+    grid-area: navLogo;
+    justify-content: flex-start;
+    margin-left: 10%;
+    height: 80px;
+}
+#navLogoTxt {
+    font-family: "Amatic";
+    font-size: min(7vw, 80px);
+    margin-top: -10px;
+}
+#navProducts {
+    grid-area: navProducts;
+}
+#navShops {
+    grid-area: navShops;
+}
+#navContact {
+    grid-area: navContact;
+}
+#filler {
+    height: calc(100vh + 100px);
+}
+/* bandeaux */
+#introTxt {
+    overflow: hidden;
+    /* font-weight: bold; */
+    margin: 3em 0;
+    /* padding: 5px 50px 30px 50px; */
+    font-size: 125%;
+    color: #EDF4ED;
+    display: flex;
+    height: 500px; 
+    /* border: solid black 3px; */
+    overflow: hidden;
+}
+#containerText{
+    height: 420px;
+    background-color: #ABD1B5;
+    margin-top : 40px;  
+}
+h2 {
+    margin-top: 90px;
+    margin-left: 55%;
+    font-size: 225%;
+}
+ #introTxt p {
+    text-indent: 2.5em;
+    margin-top: 50px;
+    margin-left: 55%;
+    width: 30%;
+    text-align: justify;
+}
+#MainCana {
+    background-repeat: no-repeat;
+    width: min(500px, 80vw);
+    position: absolute; 
+    margin-left: 8%;
+}
+#introTxt2 {
+    margin: 6em 0; 
+    font-size: 125%;
+    color: #EDF4ED;
+    display: grid;
+    grid-template-columns: 2;
+    height: 500px;
+}
+#introTxt2 p {
+    text-indent: 2.5em;
+    margin-top: 50px;
+    margin-left: 15%;
+    margin-right: 55%;
+    text-align: justify; 
+}
+#containerText2 {
+    height: 420px;
+    background-color: #ABD1B5;
+    margin-top : 40px; 
+grid-column-start: 1;
+grid-column-end: 1;   
+}
+#MainCana2 {
+    background-repeat: no-repeat;
+    position: absolute; 
+    width: min(500px, 80vw);
+    /* margin-top: 5%; */
+    right: 8%;
+    /* margin-left: 53%; */
+}
+h3 {
+    margin-top: 90px;
+    margin-left: 9%;
+    font-size: 225%;
+}
+footer {
+    display: flex;
+    margin-top: 13em;
+    min-height: 3em;
+    border-top: 1px solid black;
+    background-color: #464646;
+    justify-content: center;
+    padding-top: 1em;
+}
+footer a {
+    text-decoration: underline solid;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+h4 {
+    font-family:"Josefin";
+    text-align:center;
+    align-items: center;
+    color:#79B791;
+    font-size:40px;
+}
+/*Nos produits Lydie*/
+.photoMosaic{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-template-rows: auto;
+    width:70%;
+    margin: 0px auto;
+    margin-bottom: 200px;
+    overflow: hidden;
+}
+.photoMosaic div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1vw;
+}
+.photoMosaic img {
+    width: 30vw;
+    min-width: 400px;
+    max-width: 500px;
+    height: 30vw;
+    min-height: 400px;
+    max-height: 500px;
+}
+.photoMosaic .text{
+    display: block;
+    height: auto;
+    text-align:center;
+    color:#79B791;
+    text-decoration:none;
+    font-size:20px;
+}
+.textdeco{
+    text-decoration:none;
+}
+/*Nous retrouver Lydie*/
+.gridContainer{
+    display:grid;
+    grid-template-columns: 2;
+    grid-template-rows: 2;
+    padding:50px;
+    grid-column-gap:50px;
+}
+.gridContainer img{
+    width:100%;
+    height:100%; 
+}
+.maps{
+    width:100%;
+    height:auto;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.socialMedia{
+    width:100%;
+    height:100%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: center;
+    font-size:60px;
+}
+#instagram{
+    width:100px;
+    height:100px;
+}
+#facebook{
+    width:100px;
+    height:100px;
+}
+@media screen and (max-width: 600px) {
+    /* queries gaetan */
+    #headerListButtons {
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+        height: 30vh;
+    }
+    .headerButtons {
+        font-size: 30px;
+    }
+    nav div:not(#navMenu) a:not(#navLogoTxt) {
+        display: none;
+    }
+    nav {
+        grid-template-columns: 80% 20%;
+        grid-template-areas:
+            "navLogo navBurger";
+    }
+    #navLogo {
+        margin-left: 5%;
+    }
+    #navLogoTxt {
+        font-size: 80px;
+    }
+    #navMenu {
+        display: flex;
+    }
+    .photoMosaic img {
+        width: 90vw;
+        height: 90vw;
+        min-width: none;
+        max-width: none;
+        min-height: none;
+        max-height: none;
+    }
+    .photoMosaic {
+        grid-template-columns: repeat(auto-fill, 1fr);
+        width: 90vw;
+        margin: 0px 5%;
+    }
+    /* queries axel */
+    
+    /* queries lydie */
+}
