@@ -18,6 +18,10 @@ body {
 .tata{
     border : solid 2px red;
 }
+.toto{
+    border : solid 2px #79B971;
+    border-radius: 8px;
+}
 /*.row {
     border: 1px solid #7451EB;
     padding: 3px;
@@ -135,8 +139,19 @@ h2 {
 #produit p:hover{
     color: #e7ff60;
 }
-
 /*Karine */
+.bnt {
+    color: #79B971;
+}
+.card {
+    font-family: "Josefin";
+    position: relative;
+    font-size: 10px;
+    background-color: white;
+    margin: 20px;
+    margin-bottom: 20px;
+}
+
 .map-responsive {
     overflow:hidden;
     padding-bottom:56.25%;
@@ -161,7 +176,19 @@ p:hover{
 i:hover{
     color: #e7ff60;
 }
-
+/*Huile Coco*/
+.margintop{
+    margin-top: 100px;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 20px;
+    width: 20px;
+    outline: black;
+    background-color: #79B971;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    border: 1px solid #79B971;
+}
 @media screen AND (max-width:640px){
 /*Sylvain */
     #headerListButtons {
@@ -177,11 +204,7 @@ i:hover{
     .none{
         display: none;
     }
-
-    
-/*Claire */
-
-
-/*Karine */
-
+    .marq{
+        margin-top: 50px;
+    }
 }
